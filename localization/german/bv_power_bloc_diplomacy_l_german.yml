@@ -1,0 +1,5 @@
+﻿l_german:
+ bv_join_power_bloc: "Dem Power Bloc eines Spielers beitreten"
+ bv_join_power_bloc_desc: "Ermöglicht es einem Spieler, auf einfache Weise dem Power Bloc eines anderen Spielers beizutreten"
+ bv_join_power_bloc_effects_desc: "• Ein Abkommen, bei dem ein [concept_country] offiziell dem [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc] beitritt"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] tritt dem $concept_power_bloc$ [TARGET_COUNTRY.GetAdjectiveNoFormatting] bei"

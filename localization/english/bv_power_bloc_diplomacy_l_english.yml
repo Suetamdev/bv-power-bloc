@@ -1,0 +1,5 @@
+﻿l_english:
+ bv_join_power_bloc: "Join player Power Bloc"
+ bv_join_power_bloc_desc: "This permit a easy way for a player to enter another player Power Bloc"
+ bv_join_power_bloc_effects_desc: "• An agreement where one [concept_country] officially joins another [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc]"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] joins the [TARGET_COUNTRY.GetAdjectiveNoFormatting] $concept_power_bloc$"

@@ -1,0 +1,5 @@
+﻿l_turkish:
+ bv_join_power_bloc: "Oyuncunun Power Bloc'una katıl"
+ bv_join_power_bloc_desc: "Bir oyuncunun başka bir oyuncunun Power Bloc'una kolayca katılmasını sağlar"
+ bv_join_power_bloc_effects_desc: "• Bir [concept_country]'ın resmi olarak [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc]'a katıldığı bir anlaşma"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] [TARGET_COUNTRY.GetAdjectiveNoFormatting] $concept_power_bloc$'a katılıyor"

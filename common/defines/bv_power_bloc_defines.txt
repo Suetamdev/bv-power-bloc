@@ -1,0 +1,4 @@
+﻿
+NPowerBlocs = {
+	MAX_PRINCIPLES = 6
+}

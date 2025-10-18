@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ bv_join_power_bloc: "加入玩家的势力集团"
+ bv_join_power_bloc_desc: "允许玩家轻松加入其他玩家的势力集团"
+ bv_join_power_bloc_effects_desc: "• 一项协议，其中一个[concept_country]正式加入[Concept('concept_country','$concept_country_possessive$')]的[concept_power_bloc]"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting]加入了[TARGET_COUNTRY.GetAdjectiveNoFormatting]的$concept_power_bloc$"

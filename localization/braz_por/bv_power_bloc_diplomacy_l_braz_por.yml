@@ -1,0 +1,5 @@
+﻿l_braz_por:
+ bv_join_power_bloc: "Entrar no Power Bloc de outro jogador"
+ bv_join_power_bloc_desc: "Permite que um jogador entre facilmente no Power Bloc de outro jogador"
+ bv_join_power_bloc_effects_desc: "• Um acordo em que um [concept_country] se junta oficialmente ao [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc]"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] entra no $concept_power_bloc$ [TARGET_COUNTRY.GetAdjectiveNoFormatting]"

@@ -1,0 +1,5 @@
+﻿l_russian:
+ bv_join_power_bloc: "Вступить в Power Bloc другого игрока"
+ bv_join_power_bloc_desc: "Позволяет игроку легко вступить в Power Bloc другого игрока"
+ bv_join_power_bloc_effects_desc: "• Соглашение, по которому [concept_country] официально присоединяется к [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc]"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting] вступает в $concept_power_bloc$ [TARGET_COUNTRY.GetAdjectiveNoFormatting]"

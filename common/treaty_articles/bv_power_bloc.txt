@@ -1,0 +1,150 @@
+﻿bv_join_power_bloc = {
+	kind = directed
+	cost = 0
+
+	flags = {
+	}
+
+	maintenance_paid_by = source_country
+	usage_limit = once_per_treaty
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/invite_to_power_bloc_treaties.dds"
+
+	visible = {
+		is_local_player = yes
+	}
+
+	possible = {
+
+	}
+
+	can_ratify = {
+		scope:source_country = {
+			is_local_player = yes
+			is_subject = no
+			is_power_bloc_leader = no
+			custom_tooltip = {
+				text = "NO_POWER_STRUGGLE_BLOC_JOIN"
+				OR = {
+					prestige < scope:target_country.prestige
+					country_rank < scope:target_country.country_rank
+				}
+			}
+		}
+		scope:target_country = {
+			exists = this.power_bloc
+			is_local_player = no
+			is_power_bloc_leader = yes
+			power_bloc ?= {
+				NOT = { scope:source_country.power_bloc ?= this }
+				NOT = {
+					any_power_bloc_member = {
+						is_diplomatic_play_enemy_of = scope:source_country
+					}
+				}
+			}
+		}
+	}
+
+	on_entry_into_force = {
+		scope:article_options.source_country = {
+			join_power_bloc = scope:article_options.target_country
+		}
+	}
+
+	on_withdrawal = {}
+	on_break = {
+		scope:withdrawing_country = {
+			change_relations = { country = scope:non_withdrawing_country value = -10 }
+		}
+	}
+
+	ai = {
+
+		treaty_categories = {
+			power_bloc
+		}
+
+		evaluation_chance = {
+			value = 0.01 # AI shouldn't volunteer into power blocs all that often
+		}
+
+		article_ai_usage = {
+            offer
+            request
+        }
+
+		inherent_accept_score = {
+			value = -10000
+		}
+
+		contextual_accept_score = {
+			if = {
+				limit = {
+					scope:treaty ?= {
+						NOT = {
+							any_scope_article_option = {
+								NOT = { has_type = join_power_bloc }
+							}
+						}
+						any_scope_article_option = {
+							has_type = join_power_bloc
+						}
+					}
+				}
+				if = {
+					limit = {
+						scope:target_country = {
+							has_variable = pro_lobby_proposal_power_bloc
+							var:pro_lobby_opportunity_target ?= scope:source_country
+						}
+					}
+					add = {
+						desc = "LOBBY_OPPORTUNITY_BONUS"
+						value = 50
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							has_variable = anti_lobby_proposal_power_bloc
+							var:anti_lobby_opportunity_target ?= scope:source_country
+						}
+					}
+					add = {
+						desc = "LOBBY_OPPORTUNITY_BONUS"
+						value = 25
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						scope:target_country = {
+							has_variable = pro_lobby_proposal_power_bloc
+							var:pro_lobby_opportunity_target ?= scope:source_country
+						}
+					}
+					add = {
+						desc = "LOBBY_OPPORTUNITY_BONUS"
+						value = 10
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							has_variable = anti_lobby_proposal_power_bloc
+							var:anti_lobby_opportunity_target ?= scope:source_country
+						}
+					}
+					add = {
+						desc = "LOBBY_OPPORTUNITY_BONUS"
+						value = 5
+					}
+				}
+			}
+		}
+	}
+}

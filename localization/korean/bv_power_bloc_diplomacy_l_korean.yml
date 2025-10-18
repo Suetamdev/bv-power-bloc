@@ -1,0 +1,5 @@
+﻿l_korean:
+ bv_join_power_bloc: "플레이어 파워 블록에 가입"
+ bv_join_power_bloc_desc: "플레이어가 다른 플레이어의 파워 블록에 쉽게 가입할 수 있도록 합니다"
+ bv_join_power_bloc_effects_desc: "• 한 [concept_country]가 공식적으로 [Concept('concept_country','$concept_country_possessive$')] [concept_power_bloc]에 합류하는 합의"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting]가 [TARGET_COUNTRY.GetAdjectiveNoFormatting]의 $concept_power_bloc$에 가입합니다"

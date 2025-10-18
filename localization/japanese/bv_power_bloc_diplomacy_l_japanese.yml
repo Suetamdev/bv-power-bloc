@@ -1,0 +1,5 @@
+﻿l_japanese:
+ bv_join_power_bloc: "プレイヤーのパワーブロックに参加する"
+ bv_join_power_bloc_desc: "プレイヤーが他のプレイヤーのパワーブロックに簡単に参加できるようにします"
+ bv_join_power_bloc_effects_desc: "• ある[concept_country]が正式に[Concept('concept_country','$concept_country_possessive$')]の[concept_power_bloc]に加入する協定"
+ bv_join_power_bloc_article_short_desc: "[SOURCE_COUNTRY.GetNameNoFormatting]が[TARGET_COUNTRY.GetAdjectiveNoFormatting]の$concept_power_bloc$に加入する"
